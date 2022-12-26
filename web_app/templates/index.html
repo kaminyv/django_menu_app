@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<header>
+    {% load menu_app_tags %}
+    <nav>
+        <ul class="nav">
+            <li><a href="">Test</a>
+                {% draw_menu 'TestMenu0' %}
+            </li>
+        </ul>
+    </nav>
+</header>
+<main>
+
+</main>
+<footer>
+
+</footer>
+</body>
+</html>
