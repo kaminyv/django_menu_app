@@ -2,7 +2,6 @@
 Tags for menu_app application.
 """
 from collections import defaultdict
-
 from django import template
 from menu_app.models import MenuItem
 
