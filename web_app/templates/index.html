@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<header>
+    {% load menu_app_tags %}
+    <ul class="nav">
+        {% with request.resolver_match.url_name as url_name %}
+        <li><a href="#">Test</a>
+            {% draw_menu 'TestMenu0' %}
+        </li>
+        {% endwith %}
+    </ul>
+</header>
+</body>
+</html>

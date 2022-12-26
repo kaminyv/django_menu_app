@@ -1,0 +1,9 @@
+
+    <ul>
+        {% for item in menu_tree %}
+            <li>
+                <a href="{% if item.item.name_url %}{% url item.item.name_url %}{% else %}{{ item.item.url }}{% endif %}" {% if url_name == item.item.name_url %}style="font-weight: bold;"{% endif %}>{{ item.item.name }}</a>
+                {% if item.items %}{% include "menu.html" with menu_tree=item.items %}{% endif %}
+            </li>
+        {% endfor %}
+    </ul>
