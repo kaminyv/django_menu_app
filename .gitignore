@@ -1,0 +1,13 @@
+# IDE
+.idea/
+.vscode/
+
+# Virtual environment
+.venv/
+.env/
+
+# ENV file
+.env
+
+#Datebase
+db.sqlite3
