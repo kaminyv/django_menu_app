@@ -12,3 +12,14 @@ venv/
 
 #Datebase
 db.sqlite3
+
+# Python
+*.py[cod]
+*.$py.class
+
+# Django
+*.log
+*.pot
+*.pyc
+*__pycache__
+*.DS_Store
