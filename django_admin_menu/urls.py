@@ -21,6 +21,8 @@ from web_app.views import index
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
+    path('web/', index, name='web'),
+    path('test/', index, name='test'),
 ]
 
 if settings.DEBUG:

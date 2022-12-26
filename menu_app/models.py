@@ -22,7 +22,8 @@ class MenuItem(models.Model):
     parent = models.ForeignKey('self', on_delete=models.SET_NULL, blank=True,
                                null=True)
     name = models.CharField(max_length=50)
-    url = models.URLField(blank=True, validators=[])
+    url = models.URLField(blank=True)
+    name_url = models.CharField(max_length=50, blank=True)
 
     def __str__(self):
         return self.name

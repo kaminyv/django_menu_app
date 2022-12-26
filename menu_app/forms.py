@@ -19,9 +19,5 @@ class MenuItemAdminForm(forms.ModelForm):
 
         menu_id = self.initial.get('menu')
 
-        menu_items = MenuItem.objects.filter(
-            menu_id=menu_id)
-
-        # Formation of menu items by parent.
-        if menu_items is not None:
-            self.fields['parent'].queryset = menu_items
+        query_items = MenuItem.objects.filter(menu_id=menu_id)
+        self.fields['parent'].queryset = query_items

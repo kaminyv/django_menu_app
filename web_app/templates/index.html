@@ -10,19 +10,13 @@
 <body>
 <header>
     {% load menu_app_tags %}
-    <nav>
-        <ul class="nav">
-            <li><a href="">Test</a>
-                {% draw_menu 'TestMenu0' %}
-            </li>
-        </ul>
-    </nav>
+    <ul class="nav">
+        {% with request.resolver_match.url_name as url_name %}
+        <li><a href="#">Test</a>
+            {% draw_menu 'TestMenu0' %}
+        </li>
+        {% endwith %}
+    </ul>
 </header>
-<main>
-
-</main>
-<footer>
-
-</footer>
 </body>
 </html>
